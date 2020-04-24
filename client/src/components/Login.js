@@ -22,7 +22,7 @@ export default function Login(props) {
     axiosWithAuth()
       .post("http://localhost:5000/api/login", credentials)
       .then((result) => {
-        console.log(result);
+        // console.log(result);
         localStorage.setItem("token", result.data.payload);
         console.log(props);
         props.history.push("/protected");
