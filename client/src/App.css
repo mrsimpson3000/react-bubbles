@@ -13,10 +13,10 @@
   background-size: cover;
  } */
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+} */
 
 .navBar {
   display: flex;
@@ -42,7 +42,7 @@ code {
   text-decoration: none;
 }
 
-.loginForm {
+/* .loginForm {
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -54,4 +54,4 @@ code {
 
 .loginForm button {
   margin: 1%;
-}
+} */

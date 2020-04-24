@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { axiosWithAuth } from "./utils/axiosAuth";
 
 const initialColor = {
   color: "",
   code: { hex: "" },
 };
 
-const ColorList = ({ colors, updateColors }) => {
+const ColorList = ({ colors, updateColors, getColorList }) => {
   console.log(colors);
   const [editing, setEditing] = useState(false);
   const [colorToEdit, setColorToEdit] = useState(initialColor);
@@ -25,6 +26,16 @@ const ColorList = ({ colors, updateColors }) => {
 
   const deleteColor = (color) => {
     // make a delete request to delete this color
+    console.log(color.id);
+    axiosWithAuth()
+      .delete(`http://localhost:5000/api/colors/${color.id}`)
+      .then((res) => {
+        console.log(res);
+        getColorList();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
