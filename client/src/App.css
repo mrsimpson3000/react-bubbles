@@ -36,6 +36,7 @@
 
 .links li {
   cursor: pointer;
+  padding: 0 5px;
 }
 
 .no-underline {
